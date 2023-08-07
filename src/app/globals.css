@@ -1,27 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400;1,500;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+    color: #EAEBEA;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    background-color: #030406;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.green{
+    width: 95vw;
+    height: 70px;
+    position: absolute;
+  top: 50%;
+  left: 0;  
+  transform: skewY(20deg);
+  filter: blur(200px);
+  z-index: -1;
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.orange{
+    width: 60vw;
+    height: 90px;
+    position: absolute;
+  left: 0;  
+  transform: skewY(-30deg);
+  filter: blur(200px);
+  z-index: -2;
+}
+.pink{
+    width: 20vw;
+    height: 90px;
+    position: absolute;
+  top: 80%;
+  right: 0%;  
+  transform: skewY(-20deg);
+  filter: blur(200px);
+  z-index: -3;
 }
