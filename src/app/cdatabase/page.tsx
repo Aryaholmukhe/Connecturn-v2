@@ -1,34 +1,35 @@
 import Link from "next/link"
-import {prisma} from "@/db"
-import {TodoItem} from "../../components/TodoItem"
+import { prisma } from "@/db"
+import { Item } from "../../components/Item"
 
-  function getTodos(){
-    return prisma.todo.findMany()
-  }
+function getItem() {
+  return prisma.todo.findMany()
+}
 
-  async function toggleTodo(id: string, complete: boolean){
-    "use server"
+async function toggleItem(id: string, complete: boolean) {
+  "use server"
 
-    await prisma.todo.update({where: {id}, data: {complete}})
-  }
+  await prisma.todo.update({ where: { id }, data: { complete } })
+}
 
 export default async function Page() {
 
-  const todos = await getTodos()
+  const items = await getItem()
   // await prisma.todo.create({data: {title: "test", complete: false}})
-
+  //  await prisma.todo.deleteMany({}) //delete all items
   return (
     <>
       <header>
-        <h1>To do</h1>
-        <Link href="/new"> New </Link>
+        {/* <Link href="/new"> New </Link> */}
       </header>
-      <ul className="pl-4">
-        {todos.map(todo => (
-          <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
+      <ul className="pl-4 grid gap-7 lg:grid-cols-3 ">
+        {items.map(item => (
+          <Item key={item.id} {...item} toggleItem={toggleItem} />
         ))}
       </ul>
     </>
 
   )
 }
+
+

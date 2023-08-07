@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Navbar from "../../components/Navbar"
+import Testimony from "../../components/Testimony"
 export default function Page() {
     return (
         <>
@@ -46,22 +47,23 @@ export default function Page() {
                         <header className="my-4 text-left sm:my-20">
                             <h2 className="text-2xl">SEE WHAT PAST BUSINESS OWNERS SAY ABOUT US:</h2>
                         </header>
-                        <div className="sm:flex m-3">
-                            <div className="p-4 grow">Image</div>
-                            <div className="grow">
-                                <p className="p-2">“Helped us gain real value and connecting with students was real fun”</p>
-                                <hr />
-                                <p className="p-2 text-left">-- Someone Name, CEO at coolio.com</p>
-                            </div>
-                        </div>
-                        <div className="sm:flex m-3">
-                            <div className="p-4 grow">Image</div>
-                            <div className="grow">
-                                <p className="p-2">“Helped us gain real value and connecting with students was real fun”</p>
-                                <hr />
-                                <p className="p-2 text-left">-- Someone Name, CEO at coolio.com</p>
-                            </div>
-                        </div>
+                        <Testimony 
+                        info="r" 
+                        name="r" 
+                        role="r" 
+                        company="r"
+                        />
+                       <Testimony 
+                        info="r" 
+                        name="r" 
+                        role="r" 
+                        company="r"
+                        />
+                    </section>
+                    <section>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScgfWQcO0h5kTJFvkp3XAa36ZStp1-Y8inWGi7XMFD-Fp7WCA/viewform?embedded=true"
+                     width="640" 
+                     height="2111">Loading…</iframe>
                     </section>
                 </main>
 
