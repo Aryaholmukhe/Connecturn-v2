@@ -7,7 +7,17 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Connecturn',
   description: 'We create opportunities for you.',
-}
+  keywords: ['connecturn', 'opportunities', 'networking', 'students', 'small businesses'],
+  author: 'Connecturn',
+  image: 'https://example.com/your-image.png',
+  url: 'https://example.com/your-page-url',
+  og: {
+    title: 'Connecturn - We create opportunities for you.',
+    description: 'Connect with students and small businesses to build meaningful connections.',
+    image: 'https://example.com/your-image.png',
+  },
+};
+
 
 export default function RootLayout({
   children,

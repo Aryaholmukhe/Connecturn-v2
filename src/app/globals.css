@@ -4,8 +4,8 @@
 @tailwind utilities;
 
 *{
-    color: #EAEBEA;
     font-family: 'Ubuntu', sans-serif;
+    color:white;
 }
 body{
     background-color: #030406;

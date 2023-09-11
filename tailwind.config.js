@@ -13,7 +13,8 @@ module.exports = {
       'c-purple': '#615EFD',
       'c-pink': '#DC4E7E',
       'c-white': '#EAEBEA',
-      'c-black': '#030406'
+      'c-black': '#030406',
+      'c-grey': '#A5A5A5',
     },
     extend: {
       fontFamily: {
